@@ -26,6 +26,11 @@ end
 
 def list_of_directors(source)
   # Write this implementation
+  retVal = {}
+  source.length.times do |index|
+    retVal.push(source[i][:name])
+  end
+  return retVal 
 end
 
 def total_gross(source)
