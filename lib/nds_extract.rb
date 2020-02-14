@@ -49,6 +49,7 @@ def total_gross(source)
   names = list_of_directors(source)
   names.length.times do |index|
     retVal += totals[names[index]]
+  end  
   return retVal
 end
 
