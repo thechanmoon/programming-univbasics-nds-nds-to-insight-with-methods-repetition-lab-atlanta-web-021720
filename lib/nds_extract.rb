@@ -26,9 +26,15 @@ end
 
 def list_of_directors(source)
   # Write this implementation
+  retVal = []
+  source.length.times do |index|
+    retVal.push(source[index][:name])
+  end
+  return retVal 
 end
 
 def total_gross(source)
+  
   # Write this implementation
   #
   # Should use methods:
@@ -38,6 +44,13 @@ def total_gross(source)
   # Visit each key (i.e. director name), look up the value in the hash
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
+  retVal = 0
+  totals = directors_totals(source)
+  names = list_of_directors(source)
+  names.length.times do |index|
+    retVal += totals[names[index]]
+  end  
+  return retVal
 end
 
 
