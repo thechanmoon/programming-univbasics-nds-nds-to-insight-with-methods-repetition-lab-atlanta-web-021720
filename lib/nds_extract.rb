@@ -28,7 +28,7 @@ def list_of_directors(source)
   # Write this implementation
   retVal = {}
   source.length.times do |index|
-    retVal.push(source[index][:name])
+    retVal << source[index][:name]
   end
   return retVal 
 end
